@@ -11,7 +11,7 @@ div.logo>a{
     display: block;
 }
 body{
-    background-color: grey !important;
+    background-color: #f0f1f5 !important;
 }
 nav ul.Menu{
     list-style-type: none;
@@ -39,6 +39,9 @@ nav ul.Menu>li{
     max-width: 300px;
     border-left: 1px solid #f0f1f5;
 }
+nav ul.Menu>li:first-child{
+    border-left: 0px;
+}
 ul.Menu li>a:hover{
     background-color: #383a3d;
 }
@@ -60,6 +63,8 @@ ul.Menu li:first-child{
 }
 img.search{
     width: 10px;
+    position:relative;
+    left:-20px;
 }
 .banner{
     display:block;
