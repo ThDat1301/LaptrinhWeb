@@ -2,7 +2,10 @@
     font-family: Logo;
     src: url(Font-logo/Alberobello\ Serif.woff);
   }
-div.logo>a{
+*{
+    box-sizing: border-box;
+}
+  div.logo>a{
     font-size:40px;
     font-family: logo;
     color:#f0f1f5;
@@ -37,7 +40,6 @@ nav ul.Menu a{
 }
 nav ul.Menu>li{
     max-width: 300px;
-    border-left: 1px solid #f0f1f5;
 }
 nav ul.Menu>li:first-child{
     border-left: 0px;
@@ -72,3 +74,35 @@ img.search{
     margin-left: auto;
     margin-right: auto;
 }
+/*THUCDON*/
+div.items{
+    display: flex;
+    flex-wrap:wrap;
+}
+div.item{
+    background-color: #ffffff;
+    width: 25%;
+    padding:10px;
+    height:600px
+}
+div.item img{
+    width: 100%;
+}
+div.item h2{
+    text-align: center;
+    height: 65px;
+}
+p.DesSp{
+    text-align: center;
+    height:10%
+    
+}
+span.GiaSp{
+    padding-right: 90px;
+    text-align: center;
+}
+input.Muahang{
+    margin-right: 40px;
+    float: right;
+}
+
