@@ -74,44 +74,74 @@ img.search{
     margin-left: auto;
     margin-right: auto;
 }
+/*FOOTER*/
+div.footerItems{
+    background-color: #2d2f33;
+}
+div.footerItem h2{
+    color: #f0f1f5;
+}
 /*THUCDON*/
+div.nameDish{
+    font-size: 30px;
+    padding: 10px;
+    background-color: #2d2f33;
+    color:#f0f1f5;
+}
 div.items{
     display: flex;
     flex-wrap:wrap;
 }
 div.item{
-    background-color: #ffffff;
     width: 25%;
     padding:10px;
-    height:600px
+    border: 2px #2d2f33 solid;
+    height: auto;
 }
 div.item img{
+    max-width: 100%;
     width: 100%;
+    height:auto;
 }
 div.item h2{
     text-align: center;
-    height: 65px;
+    height: 70px;
+    margin-bottom: 5px;
 }
 p.DesSp{
     text-align: center;
-    height:10%
-    
+    height:10%;
 }
 span.GiaSp{
-    padding-right: 90px;
+    background-color: #2d2f33;
+    color: #f0f1f5;
     text-align: center;
+    padding: 10px;
+    border-radius: 20px 20px;
+    font-size: 15px;
+    float: left;
+    border:none;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 input.Muahang{
-    margin-right: 40px;
+    background-color: red;
+    color: yellow;
+    text-align: center;
+    padding: 10px;
+    border-radius: 20px 20px;
+    font-size: 15px;
     float: right;
+    border:none;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
-
+/*BANNER*/
 div.description h1{
     font-family: logo;
     font-weight: bold;
     text-align: center;
     margin: 40px;
-
 }
 div.description{
     background-color: #f0f1f5;
@@ -126,7 +156,6 @@ div.description p{
 }
 div.image_description img{
     margin-top: 100px;
-
 } 
 div.demo{
     display: flex;
@@ -138,5 +167,4 @@ div.decorate {
 div.decorate img{
     width: 100%;
     height: 100%;
-
 }
