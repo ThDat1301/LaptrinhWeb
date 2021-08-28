@@ -133,11 +133,17 @@ div.iconItem>a{
 }
 /*THUCDON*/
 div.nameDish{
-    font-size: 30px;
     padding: 10px;
-    background-color: #2d2f33;
-    color:#f0f1f5;
+    background-image: linear-gradient(to left, rgba(255,0,0,0), #2d2f33);
+    color: #f0f1f5;
+    border-bottom: 1px #2d2f33 solid;
+    text-align: center;
 }
+div.nameDish h1{
+    font-weight: bold;
+    font-size:2rem;
+}
+
 div.items{
     display: flex;
     flex-wrap:wrap;
@@ -155,8 +161,10 @@ div.item img{
     height:auto;
 }
 div.item h2{
+    font-size: 2vw;
+    font-weight: bold;
     text-align: center;
-    height: 70px;
+    height: 5vw;
     margin-bottom: 5px;
 }
 p.DesSp{
@@ -264,4 +272,12 @@ div.decorate img{
     margin:auto;
     width: 100%;
     padding: 10px;
+}
+.thumbName{
+    border-bottom: #2d2f33;
+    border-bottom:1px #2d2f33 solid;
+}
+.thumbName h1{
+    font-weight: bold;
+    text-align: center;
 }
