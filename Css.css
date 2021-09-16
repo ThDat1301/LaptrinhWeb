@@ -161,16 +161,18 @@ div.item img{
     width: 100%;
     height:auto;
 }
-div.item h2{
-    font-size: 2vw;
+div.item div h2{
+    height: 78px;
     font-weight: bold;
     text-align: center;
-    height: 5vw;
     margin-bottom: 5px;
+    overflow:hidden;
 }
 p.DesSp{
     text-align: center;
-    height:10%;
+    height:11%;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 span.GiaSp{
     background-color: #2d2f33;
@@ -299,7 +301,7 @@ div.decorate img{
     display:none;
     position: fixed;
     z-index: 1;
-    padding-top:100px;
+    padding-top:5%;
     left: 0;
     top: 0;
     width: 100%;
@@ -315,6 +317,7 @@ div.decorate img{
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
+    height: 80%;
   }
 /* The Close Button */
 .close {
