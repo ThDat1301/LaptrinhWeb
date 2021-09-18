@@ -80,20 +80,18 @@ div.search button{
     margin-right: auto;
 }
 /*FOOTER*/
-div.Footer{
+footer{
     background-color: #2d2f33;
-    clear:both;
 }
 div.footerItems{
-    background-color: #2d2f33;
     border-right:1px #f0f1f5 solid;
 }
 div.footerItem{
-    background-color: #2d2f33;
     display:flex;
     flex-direction: column;
     float:left;
     width: 20%;
+    text-align: center;
 }
 div.footerItem h2{
     color: #f0f1f5;
@@ -128,6 +126,7 @@ div.iconItem{
 }
 div.iconItem div>input{
     width:75%;
+    text-align: center;
 }
 div.iconItem>a{
     color:#f0f1f5;
@@ -137,7 +136,6 @@ div.nameDish{
     padding: 10px;
     background-image: linear-gradient(to left, rgba(255,0,0,0), #2d2f33);
     color: #f0f1f5;
-    border-bottom: 1px #2d2f33 solid;
     text-align: center;
 }
 div.nameDish h1{
@@ -156,35 +154,39 @@ div.item{
     padding:10px;
     height: auto;
 }
-div.item img{
-    max-width: 100%;
+div.twob{
+    width:100%;
+    display:flex;
+    justify-content: center;
+}
+div.item div img{
     width: 100%;
-    height:auto;
 }
 div.item div h2{
-    height: 78px;
+    font-size: 20px;
     font-weight: bold;
     text-align: center;
     margin-bottom: 5px;
     overflow:hidden;
 }
-p.DesSp{
-    text-align: center;
-    height:11%;
+div.DesSp{
+    height: 50px;
     overflow: hidden;
     text-overflow: ellipsis;
+    text-align: center; 
 }
-span.GiaSp{
+div.GiaSp{
     background-color: #2d2f33;
     color: #f0f1f5;
     text-align: center;
     padding: 10px;
     border-radius: 20px 20px;
     font-size: 15px;
-    float: left;
     border:none;
     margin-top: 10px;
     margin-bottom: 10px;
+    margin-right: 10px;
+    width:40%;
 }
 input.Muahang{
     background-color: red;
@@ -193,10 +195,10 @@ input.Muahang{
     padding: 10px;
     border-radius: 20px 20px;
     font-size: 15px;
-    float: right;
     border:none;
     margin-top: 10px;
     margin-bottom: 10px;
+    width:40%;
 }
 /*BANNER*/
 div.description h1{
@@ -277,9 +279,6 @@ div.decorate img{
     padding: 10px;
     float:right;
 }
-.thumbName{
-    border-bottom:1px #2d2f33 solid;
-}
 .thumbName h1{
     font-weight: bold;
     text-align: center;
@@ -301,7 +300,7 @@ div.decorate img{
     display:none;
     position: fixed;
     z-index: 1;
-    padding-top:5%;
+    padding-top:2%;
     left: 0;
     top: 0;
     width: 100%;
@@ -312,12 +311,13 @@ div.decorate img{
 }
 /* Modal Content */
 .modalContent {
-    background-color: #f0f1f5;
+    background-color: #ffffff;
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
-    height: 80%;
+    width: 60%;
+    height: 98%;
+    border-radius: 20px 20px;
   }
 /* The Close Button */
 .close {
@@ -331,4 +331,45 @@ div.decorate img{
   color: #000;
   text-decoration: none;
   cursor: pointer;
+}
+div.content{
+    display:flex;
+    width:100%;
+    height:90%;
+}
+div.content>div:first-child{
+    text-align: center;
+}
+div.content>div:last-child{
+    background-color: #fafafa;
+    border-radius: 20px 20px;
+}
+div.imgThumb img{
+    width:100%;
+}
+div.content>div{
+    width:50%; 
+    padding:40px;
+    overflow:auto;
+}
+div.size ul{
+    list-style-type: none;
+    display:flex;
+    padding:0;
+}
+div.size ul > li{
+    background-color: #2d2f33;
+    padding: 5px;
+    margin-right:5px;
+    color:#f0f1f5;
+    border-radius: 10px 10px;
+    
+}
+div.size ul > li input{
+    position: absolute;
+    left: -9999px;
+}
+label{
+    text-align: center;
+    width:60px;
 }
