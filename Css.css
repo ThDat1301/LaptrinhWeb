@@ -207,6 +207,17 @@ div.description h1{
     text-align: center;
     margin: 40px;
 }
+div.concept{
+    width: 90%;
+}
+div.description a h2{
+    color: black;
+    text-align: center;
+
+}
+div.description a{
+    text-decoration: none;
+}
 div.description{
     background-color: #f0f1f5;
     width: 35%;
