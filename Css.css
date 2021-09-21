@@ -68,10 +68,10 @@ input[type=search]{
     border:none;
     border-radius: 10px 0 0 10px;
 }
-input[type=button] {
+div.search input[type=button] {
     padding:5px;
     border:none;
-    background-color: #383a3d;
+    background-color: #696d75;
     border-radius: 0 10px 10px 0;
 }
 .banner{
@@ -187,6 +187,7 @@ div.GiaSp{
     background-color: #2d2f33;
     color: #f0f1f5;
     text-align: center;
+    white-space:nowrap;
     padding: 10px;
     border-radius: 20px 20px;
     font-size: 15px;
@@ -194,7 +195,9 @@ div.GiaSp{
     margin-top: 10px;
     margin-bottom: 10px;
     margin-right: 10px;
-    width:40%;
+    width:60%;
+    overflow: hidden;
+    text-overflow:ellipsis;
 }
 input.Muahang{
     background-color: red;
@@ -207,6 +210,8 @@ input.Muahang{
     margin-top: 10px;
     margin-bottom: 10px;
     width:40%;
+    overflow: hidden;
+    text-overflow:ellipsis;
 }
 /*BANNER*/
 div.description h1{
