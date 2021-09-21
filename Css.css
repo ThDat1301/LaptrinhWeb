@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
   div.logo>a{
-    font-size:40px;
+    font-size:33px;
     font-family: logo;
     color:#f0f1f5;
     text-decoration: none;
@@ -30,6 +30,8 @@ nav ul.Menu a h1{
     font-family: Arial, Helvetica, sans-serif !important;
     font-size: 16px;
     padding:15px;
+    margin:0;
+    text-align: center;
 }
 nav ul.Menu a{
     width: 100%;
@@ -51,27 +53,26 @@ ul.Menu li>a:hover{
 ul.Menu li:first-child{
     margin-right:auto;
 }
+ul.Menu li:last-child{
+    padding:10px;
+}
 .search{
     display:flex;
-    justify-content: center;
     align-items: center;
     height: 100%;
 }
-.search input{
+input[type=search]{
     padding:5px;
-    background-color: #383a3d;
+    background-color: #f0f1f5;
     width:75%;
-    border-radius: 10px 10px;
     border:none;
-    
+    border-radius: 10px 0 0 10px;
 }
-div.search button{
-    border-radius: 0 10px 10px 0;
+input[type=button] {
+    padding:5px;
     border:none;
-    font-size: 18px;
     background-color: #383a3d;
-    position:relative;
-    left:-34px;
+    border-radius: 0 10px 10px 0;
 }
 .banner{
     display:block;
@@ -159,8 +160,13 @@ div.twob{
     display:flex;
     justify-content: center;
 }
-div.item div img{
+div.item div.imgPro{
     width: 100%;
+    text-align: center;
+}
+div.item div img{
+    width:100%;
+    max-width: fit-content;
 }
 div.item div h2{
     font-size: 20px;
@@ -168,12 +174,14 @@ div.item div h2{
     text-align: center;
     margin-bottom: 5px;
     overflow:hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis
 }
-div.DesSp{
-    height: 50px;
+div.DesSp p{
+    white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;
     text-align: center; 
+    text-overflow: ellipsis;
 }
 div.GiaSp{
     background-color: #2d2f33;

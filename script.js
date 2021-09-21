@@ -9,12 +9,10 @@ var mainGia = document.querySelector("div.priceThumb")
 var gia = document.querySelectorAll("div.GiaSp")
 let namePro = document.querySelectorAll("div.namePro h2")
 var mainName = document.querySelector("div.nameThumb h3")
-
 // Modal description about product
 for(let i = 0; i < button.length; i++)
 {
     button[i].onclick = function() {
-
             let pathImg = imgProduct[i].src;
             mainImg.setAttribute("src",pathImg)
             mainName.innerHTML = namePro[i].innerHTML
