@@ -4,7 +4,7 @@
  let k = document.getElementById("kw")
  if (k != null){
      k = k.value
-    if(k===""){
+    if(k==""){
         alert("Vui lòng nhập từ khóa!")
         setTimeout(function(){
             let items = document.querySelectorAll("div.items > div.item")
@@ -63,3 +63,41 @@ if (event.target == modal) {
     }
 }
 };
+//Option for Modal Box
+let valsizeNum = document.querySelectorAll("div.size ul li input")
+let sizeNum = document.querySelector("span.sizeNum")
+let prev = null;
+for(let i = 0; i < valsizeNum.length; i++) {
+    valsizeNum[i].onclick = function () {
+        (prev)? console.log(prev.value):null;
+        if( valsizeNum[i] !== prev) {
+            prev = valsizeNum[i];
+        }
+        sizeNum.innerText = valsizeNum[i].value
+    };
+}
+/* slideshow toping */
+let Lbtn = document.getElementsByClassName("left-btn")
+let Rbtn = document.getElementsByClassName("right-btn")
+Lbtn.onclick = plusDiv(-1)
+Rbtn.onclick = plusDiv(1)
+var slideIndex = 1
+showDivs(slideIndex)
+function plusDiv(n){
+    showDivs(slideIndex += n)
+}
+function showDivs(n) {
+    let i;
+    let x = document.querySelectorAll("div.toping ul li")
+    if(n > x.length){
+        slideIndex = 1
+    }
+    if(n < 3){
+        slideIndex = x.length
+    }
+    for (i = 0; i < x.length; i++){
+        x[i].style.display = "none";
+    }
+    x[slideIndex - 1].style.display = "block"
+}
+

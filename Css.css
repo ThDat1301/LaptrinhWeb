@@ -5,6 +5,9 @@
 *{
     box-sizing: border-box;
 }
+ul{
+    list-style-type: none;
+}
   div.logo>a{
     font-size:33px;
     font-family: logo;
@@ -18,7 +21,6 @@ body{
     background-color: #f0f1f5 !important;
 }
 nav ul.Menu{
-    list-style-type: none;
     background-color: #2d2f33;
     display:flex;
     margin:0;
@@ -66,13 +68,14 @@ input[type=search]{
     background-color: #f0f1f5;
     width:75%;
     border:none;
-    border-radius: 10px 0 0 10px;
+    border-radius: 4px 0 0 4px;
 }
-div.search input[type=button] {
+div.search input[type="button"] {
     padding:5px;
     border:none;
     background-color: #696d75;
-    border-radius: 0 10px 10px 0;
+    border-radius: 0 4px 4px 0;
+    color: #f0f1f5;
 }
 .banner{
     display:block;
@@ -160,9 +163,16 @@ div.twob{
     display:flex;
     justify-content: center;
 }
+div.item div{
+    transition: ease 0.4s;
+}
 div.item div.imgPro{
     width: 100%;
     text-align: center;
+    padding: 10px;
+}
+div.item div.imgPro:hover{
+    transform:rotate(15deg);
 }
 div.item div img{
     width:100%;
@@ -200,6 +210,7 @@ div.GiaSp{
     text-overflow:ellipsis;
 }
 input.Muahang{
+    cursor: pointer;
     background-color: red;
     color: yellow;
     text-align: center;
@@ -370,30 +381,108 @@ div.content>div:last-child{
 }
 div.imgThumb img{
     width:100%;
+    position: sticky;
+    top: 0;
+}
+div.content>div:first-child{
+    overflow:hidden;
 }
 div.content>div{
     width:50%; 
     padding:40px;
-    overflow:auto;
+    overflow-x: hidden;
+    overflow-y:auto;
+}
+div.size{
+    border-bottom: #2d2f33 1px solid;
 }
 div.size ul{
-    list-style-type: none;
     display:flex;
+    justify-content: space-evenly;
     padding:0;
 }
-div.size ul > li{
-    background-color: #2d2f33;
-    padding: 5px;
+div.size ul li {
+    width: 20%;
     margin-right:5px;
-    color:#f0f1f5;
-    border-radius: 10px 10px;
-    
 }
-div.size ul > li input{
+div.size ul li:last-child{
+    margin-right: none;
+}
+input[type="radio"]{
     position: absolute;
     left: -9999px;
 }
-label{
-    text-align: center;
-    width:60px;
+input[type="checkbox"]{
+    position: absolute;
+    left: -9999px;
 }
+div.size ul li label{
+    width: 100%;
+    height:100%;
+    text-align: center;
+    background-color: #2d2f33;
+    padding: 7px;
+    color:#f0f1f5;
+    border-radius: 4px;
+}
+div.size ul > li > input[type="radio"]:checked+label{
+    background-color: #1c6be2;
+    border: solid #000000 1px;
+}
+div.size ul > li > input[type="checkbox"]:checked+label{
+    border: solid #000000 1px;
+}
+div h3{
+    padding: 10px;
+}
+div.baseType ul{
+    display:flex;
+    justify-content:space-between;
+    padding:0;
+}
+div.baseType ul li{
+    width: 17%;
+    margin-right:10px;
+}
+div.baseType ul li:last-child{
+    margin-right:none;
+}
+div.baseType ul > li > input[type="radio"]:checked+label{
+    background-color: #1c6be2;
+    border: solid #000000 1px;
+}
+div.baseType ul li label{
+    width: 100%;
+    height:100%;
+    text-align: center;
+    background-color: #2d2f33;
+    padding: 7px;
+    color:#f0f1f5;
+    border-radius: 4px;
+}
+div.toping ul{
+    display:flex;
+    flex-wrap: nowrap;
+    padding:0;
+}
+div.toping ul li{
+    margin-right: 10px;
+    width: 30%;
+}
+div.toping ul li:last-child{
+    margin-right: none;
+}
+div.toping ul li label{
+    width: 100%;
+    height:100%;
+    text-align: center;
+    color: #2d2f33;
+    padding: 7px;
+    border-radius: 4px;
+    border: #000000 1px solid;
+}
+div.toping ul li label::before{
+    background-color:aqua;
+}
+/* slideshow toping */
+
