@@ -77,27 +77,21 @@ for(let i = 0; i < valsizeNum.length; i++) {
     };
 }
 /* slideshow toping */
-let Lbtn = document.getElementsByClassName("left-btn")
-let Rbtn = document.getElementsByClassName("right-btn")
-Lbtn.onclick = plusDiv(-1)
-Rbtn.onclick = plusDiv(1)
-var slideIndex = 1
-showDivs(slideIndex)
-function plusDiv(n){
-    showDivs(slideIndex += n)
+let Lbtn = document.querySelector("span.left-btn input")
+let Rbtn = document.querySelector("span.right-btn input")
+var slideIndex = 3;
+showDivs(slideIndex);
+function plusDivs(n) {
+  showDivs(slideIndex += n);
 }
 function showDivs(n) {
-    let i;
-    let x = document.querySelectorAll("div.toping ul li")
-    if(n > x.length){
-        slideIndex = 1
-    }
-    if(n < 3){
-        slideIndex = x.length
-    }
-    for (i = 0; i < x.length; i++){
-        x[i].style.display = "none";
-    }
-    x[slideIndex - 1].style.display = "block"
-}
-
+  let x = document.querySelectorAll("div.toping ul li")
+  if (n > x.length) {slideIndex = x.length}
+  if (n < 3) {slideIndex = 3} ;
+  for (let i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+  x[slideIndex-2].style.display = "block";
+  x[slideIndex-3].style.display = "block";
+} 

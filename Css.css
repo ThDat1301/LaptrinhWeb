@@ -376,13 +376,16 @@ div.content>div:first-child{
     text-align: center;
 }
 div.content>div:last-child{
-    background-color: #fafafa;
+    background-color: #dfdfdf;
     border-radius: 20px 20px;
 }
 div.imgThumb img{
     width:100%;
     position: sticky;
     top: 0;
+}
+div.priceThumb{
+    font-size: 2em;
 }
 div.content>div:first-child{
     overflow:hidden;
@@ -429,9 +432,6 @@ div.size ul > li > input[type="radio"]:checked+label{
     background-color: #1c6be2;
     border: solid #000000 1px;
 }
-div.size ul > li > input[type="checkbox"]:checked+label{
-    border: solid #000000 1px;
-}
 div h3{
     padding: 10px;
 }
@@ -461,28 +461,54 @@ div.baseType ul li label{
     border-radius: 4px;
 }
 div.toping ul{
+    position: relative;
     display:flex;
-    flex-wrap: nowrap;
+    align-items:center;
     padding:0;
+    height: 120px;
 }
 div.toping ul li{
     margin-right: 10px;
-    width: 30%;
+    width: 100%;
 }
 div.toping ul li:last-child{
     margin-right: none;
 }
 div.toping ul li label{
+    display:flex;
+    flex-direction: column;
     width: 100%;
-    height:100%;
+    height: 100%;
     text-align: center;
+    background-color: #f0f1f5;
     color: #2d2f33;
     padding: 7px;
     border-radius: 4px;
     border: #000000 1px solid;
-}
-div.toping ul li label::before{
-    background-color:aqua;
+    cursor: pointer;
 }
 /* slideshow toping */
-
+div.toping ul > li > input[type="checkbox"]:checked+label{
+    background-color: #1c6be2;
+    border: solid #000000 1px;
+    color: #f0f1f5;
+}
+span.left-btn input{
+    position: absolute;
+    top: 30%;
+    left:-8%;
+}
+span.right-btn input{
+    position: absolute;
+    top: 30%;
+    right:-6%;
+}
+div.toping ul li{
+    display:none;
+}
+div.note textarea{
+    width: 100%;
+    height: 100px;
+    border-radius: 4px;
+    padding: 10px;
+}
