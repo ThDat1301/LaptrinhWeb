@@ -64,8 +64,8 @@ if (event.target == modal) {
 }
 };
 //Option for Modal Box
-let valsizeNum = document.querySelectorAll("div.size ul li input")
 let sizeNum = document.querySelector("span.sizeNum")
+let valsizeNum = document.querySelectorAll("div.size ul li input")
 let prev = null;
 for(let i = 0; i < valsizeNum.length; i++) {
     valsizeNum[i].onclick = function () {
@@ -76,6 +76,17 @@ for(let i = 0; i < valsizeNum.length; i++) {
         sizeNum.innerText = valsizeNum[i].value
     };
 }
+let baseTypeM = document.querySelector("span.baseTypemain")
+let baseType = document.querySelectorAll("div.baseType ul li input")
+for(let i = 0; i < baseType.length; i++){
+    baseType[i].onclick = function (){
+        (prev)? console.log(prev.value):null;
+        if(baseType[i] !== prev){
+            baseTypeM.innerText = baseType[i].value
+        };
+    }
+}
+
 /* slideshow toping */
 let Lbtn = document.querySelector("span.left-btn input")
 let Rbtn = document.querySelector("span.right-btn input")
