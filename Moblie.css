@@ -1,0 +1,17 @@
+@media screen and (max-width: 600px){
+    body{
+        background-color:burlywood;
+    }
+    div.item{
+        width: 99%;
+    }
+    nav ul.Menu{
+        flex-direction: column;
+    }
+    nav ul.Menu>li{
+        max-width: 100%;
+    }
+    div.footerItem{
+        width: 50%;
+    }
+    }

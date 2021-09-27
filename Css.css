@@ -89,6 +89,8 @@ footer{
 }
 div.footerItems{
     border-right:1px #f0f1f5 solid;
+    display: flex;
+    flex-wrap: wrap;
 }
 div.footerItem{
     display:flex;
@@ -96,6 +98,9 @@ div.footerItem{
     float:left;
     width: 20%;
     text-align: center;
+}
+div.footerItem:first-child{
+    justify-content: center;
 }
 div.footerItem h2{
     color: #f0f1f5;
@@ -125,8 +130,8 @@ div.iconItems{
     justify-content:center;
 }
 div.iconItem{
-    font-size: 40px;
-    padding: 10px;
+    font-size: 35px;
+    padding: 5px;
 }
 div.iconItem div>input{
     width:75%;
@@ -512,3 +517,6 @@ div.note textarea{
     border-radius: 4px;
     padding: 10px;
 }
+
+
+

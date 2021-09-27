@@ -1,0 +1,11 @@
+@media screen and (max-width: 900px){
+    body{
+        background-color: #383a3d;
+    }
+    div.item{
+        width: 49%;
+    }
+    div.footerItem{
+        width: 50%;
+    }
+}
