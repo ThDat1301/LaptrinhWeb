@@ -436,8 +436,11 @@ div.size ul li label{
     border-radius: 4px;
 }
 div.size ul > li > input[type="radio"]:checked+label{
-    background-color: #1c6be2;
+    background-color: #787f87;
     border: solid #000000 1px;
+}
+div.size ul > li > input[type="radio"]:checked+label span{
+    color: #2d2f33;
 }
 div h3{
     padding: 10px;
@@ -457,8 +460,11 @@ div.baseType ul li:last-child{
     margin-right:none;
 }
 div.baseType ul > li > input[type="radio"]:checked+label{
-    background-color: #1c6be2;
+    background-color: #787f87;
     border: solid #000000 1px;
+}
+div.baseType ul > li > input[type="radio"]:checked+label span{
+    color: #2d2f33;
 }
 div.baseType ul li label{
     width: 100%;
@@ -505,7 +511,7 @@ div.toping ul > li > input[type="checkbox"]:checked+label{
 span.left-btn input{
     position: absolute;
     top: 30%;
-    left:-8%;
+    left:-9%;
 }
 span.right-btn input{
     position: absolute;
@@ -520,6 +526,20 @@ div.note textarea{
     height: 100px;
     border-radius: 4px;
     padding: 10px;
+}
+div.Cart {
+    text-align: center;
+}
+div.Cart input{
+    width: 80%;
+    background-color: #383a3d;
+    color: #f0f1f5;
+    padding: 10px;
+    border-radius: 10px;
+    border: 0;
+}
+div.Cart input:hover{
+    background-color: #2d2f33;
 }
 
 
