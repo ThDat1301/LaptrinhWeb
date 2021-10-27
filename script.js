@@ -1,33 +1,35 @@
  //.............................Tim kiem...................................
  var search = document.getElementById("searchBtn")
- search.onclick = function () {
- let k = document.getElementById("kw")
- if (k != null){
-     k = k.value
-    if(k==""){
-        alert("Vui lòng nhập từ khóa!")
-        setTimeout(function(){
+ window.onload = function(){
+    search.onclick = function () {
+        let k = document.getElementById("kw")
+        if (k != null){
+            k = k.value
+           if(k==""){
+               alert("Vui lòng nhập từ khóa!")
+               setTimeout(function(){
+                   let items = document.querySelectorAll("div.items > div.item")
+                   for(let i = 0; i < items.length; i++){
+                       items[i].style.outline = "none"
+                   }
+               },0)
+            }
             let items = document.querySelectorAll("div.items > div.item")
             for(let i = 0; i < items.length; i++){
-                items[i].style.outline = "none"
+                var name = items[i].getElementsByClassName("namePro")[0].innerText
+                if(name.indexOf(k) >= 0){
+                    items[i].style.outline = "2px dashed red"
+                }    
             }
-        },0)
-     }
-     let items = document.querySelectorAll("div.items > div.item")
-     for(let i = 0; i < items.length; i++){
-         var name = items[i].getElementsByClassName("namePro")[0].innerText
-         if(name.indexOf(k) >= 0){
-             items[i].style.outline = "2px dashed red"
-         }    
-     }
-     setTimeout(function(){
-        let items = document.querySelectorAll("div.items > div.item")
-        for(let i = 0; i < items.length; i++){
-            items[i].style.outline = "none"
-        }
-    },3000)
-}
-}
+            setTimeout(function(){
+               let items = document.querySelectorAll("div.items > div.item")
+               for(let i = 0; i < items.length; i++){
+                   items[i].style.outline = "none"
+               }
+           },3000)
+       }
+       }
+ };
 let imgPizza = document.querySelectorAll("#pizza div.imgPro img")
 let imgSalad = document.querySelectorAll("#salad div.imgPro img")
 let imgKhaivi = document.querySelectorAll("#khaivi div.imgPro img")
@@ -127,11 +129,14 @@ for(let i = 0; i < buttonDrink.length; i++)
     }
 };
 // When the user clicks on <span> (x), close the modal
-var modal=document.getElementById("myModal")
-var span =document.getElementsByClassName("close")[0]
-span.onclick = function() {
-modal.style.display = "none";
-}
+let modal=document.getElementById("myModal")
+let span =document.getElementsByClassName("close")[0]
+window.onload = function() {
+    span.onclick = function() {
+        modal.style.display = "none";
+        }
+};
+
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
 if (event.target == modal) {
@@ -182,23 +187,44 @@ for(let i = 0; i < baseType.length; i++){
         };
     }
 }
-
+/*Form dat ban*/
+window.onload = function() {
+    let NameOfCus = document.getElementById("nameCus")
+    let PhoneNumberOfCus = document.getElementById("phoneNumCus")
+    let EmailOfCus = document.getElementById("emailCus")
+    let DateOfCus = document.getElementById("dateCus")
+    let TimeOfCus = document.getElementById("timeCus")
+    let NoteOfCus = document.getElementById("NoteCus")
+    let Submit = document.getElementById("Submit")
+    Submit.onclick = function(){
+        if(NameOfCus.value === ""|| PhoneNumberOfCus.value === "" || DateOfCus.value === "" || TimeOfCus.value === "" ){
+            alert("Vui lòng nhập đủ thông tin!")
+        }
+        else{
+            let con = confirm("Bạn có chắc chắn thông tin vừa nhậP là chính xác")
+            if(con == true){
+                alert("Đặt bàn thành công!")
+                location.reload();
+            } 
+        }
+    }
+}
 /* slideshow toping */
 let Lbtn = document.querySelector("span.left-btn input")
 let Rbtn = document.querySelector("span.right-btn input")
 var slideIndex = 3;
-showDivs(slideIndex);
 function plusDivs(n) {
-  showDivs(slideIndex += n);
+    showDivs(slideIndex += n);
 }
+showDivs(slideIndex);
 function showDivs(n) {
-  let x = document.querySelectorAll("div.toping ul li")
-  if (n > x.length) {slideIndex = x.length}
-  if (n < 3) {slideIndex = 3} ;
-  for (let i = 0; i < x.length; i++) {
+    let x = document.querySelectorAll("div.toping ul li")
+    if (n > x.length) {slideIndex = x.length}
+    if (n < 3) {slideIndex = 3} ;
+    for (let i = 0; i < x.length; i++) {
     x[i].style.display = "none";
-  }
-  x[slideIndex-1].style.display = "block";
-  x[slideIndex-2].style.display = "block";
-  x[slideIndex-3].style.display = "block";
-} 
+    }
+    x[slideIndex-1].style.display = "block";
+    x[slideIndex-2].style.display = "block";
+    x[slideIndex-3].style.display = "block";
+}

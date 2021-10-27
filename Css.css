@@ -88,14 +88,13 @@ footer{
     background-color: #2d2f33;
 }
 div.footerItems{
-    border-right:1px #f0f1f5 solid;
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
 }
 div.footerItem{
     display:flex;
     flex-direction: column;
-    float:left;
     width: 20%;
     text-align: center;
 }
@@ -340,34 +339,33 @@ div.decorate img{
     display:none;
     position: fixed;
     z-index: 1;
-    padding-top:2%;
+    padding-top:1%;
     left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
     overflow: auto;
     background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.4);
 }
 /* Modal Content */
 .modalContent {
+    overflow: hidden;
     background-color: #ffffff;
     margin: auto;
-    padding: 20px;
+    padding: 10px;
     border: 1px solid #888;
-    width: 60%;
+    width: 1000px;
     height: 98%;
     border-radius: 20px 20px;
   }
 /* The Close Button */
-.close {
+.close1 {
     color: #aaaaaa;
     float: right;
-    font-size: 28px;
+    font-size: 45px;
     font-weight: bold;
   }
-.close:hover,
-.close:focus {
+.close1:hover,
+.close1:focus {
   color: #000;
   text-decoration: none;
   cursor: pointer;
@@ -414,6 +412,7 @@ div.size ul{
 div.size ul li {
     width: 30%;
     margin-right:5px;
+   
 }
 div.size ul li:last-child{
     margin-right: none;
@@ -425,6 +424,7 @@ input[type="radio"]{
 input[type="checkbox"]{
     position: absolute;
     left: -9999px;
+    
 }
 div.size ul li label{
     width: 100%;
@@ -434,6 +434,7 @@ div.size ul li label{
     padding: 7px;
     color:#f0f1f5;
     border-radius: 4px;
+    border: 1px black solid;
 }
 div.size ul > li > input[type="radio"]:checked+label{
     background-color: #787f87;
@@ -455,6 +456,9 @@ div.baseType ul li{
     width: 30%;
     margin-right:10px;
     margin-bottom: 10px;
+}
+div.baseType ul li label {
+    border: solid #000000 1px ;
 }
 div.baseType ul li:last-child{
     margin-right:none;
@@ -480,7 +484,6 @@ div.toping ul{
     display:flex;
     align-items:center;
     padding:0;
-    height: 120px;
 }
 div.toping ul li{
     margin-right: 10px;
@@ -540,6 +543,30 @@ div.Cart input{
 }
 div.Cart input:hover{
     background-color: #2d2f33;
+}
+/*Form dat ban*/
+
+div.contentContact h2{
+    text-align: center;
+}
+div.contentContact{
+    overflow: hidden;
+}
+div.contentContact > div{
+    margin: auto;
+    width: 50%; 
+}
+div.contentContact div:last-child{
+    display: flex;
+    justify-content: flex-end;
+}
+div.contentContact div:last-child input{
+    margin-left: 3px;
+    border: 0;
+    border-radius: 4px;
+    background-color: #2d2f33;
+    color: #f0f1f5;
+    padding: 10px;
 }
 
 
