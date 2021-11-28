@@ -3,7 +3,8 @@
         font-family: 'Times New Roman', Times, serif;
     }
     div.item{
-        width: 99%;
+        width: 90%;
+        margin: auto;
     }
     nav ul.Menu{
         flex-direction: column;
@@ -43,6 +44,15 @@
     .close1{
         position: sticky;
         top: 0;
+    }
+    div.twob{
+        flex-direction: column;
+    }
+    div.GiaSp{
+        width: 100%
+    }
+    input.Muahang{
+        width: 100%;
     }
     /* ModalBox  */
     .modal{
