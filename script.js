@@ -1,3 +1,5 @@
+
+
 let showMenu = document.getElementById("menuButton")
 let menuItems = document.getElementsByClassName("Menuitems")
 let check = false;
@@ -5,6 +7,7 @@ showMenu.onclick = function(){
     if(!check){
         for(let i = 1; i < menuItems.length; i++){
             menuItems[i].style.display = "block"
+            
             check = true;
         }
     } else{
@@ -14,6 +17,7 @@ showMenu.onclick = function(){
         }
     }
 }
+
  //.............................Tim kiem...................................
  var search = document.getElementById("searchBtn")
  window.onload = function(){
@@ -53,11 +57,21 @@ let imgMiy = document.querySelectorAll("#miy div.imgPro img")
 let imgDrink = document.querySelectorAll("#drink div.imgPro img")
 var mainImg = document.querySelector("div.imgThumb img")
 let namePro = document.querySelectorAll("div.namePro h2")
+let namePizza = document.querySelectorAll("#pizza div.namePro h2")
+let nameSalad = document.querySelectorAll("#salad div.namePro h2")
+let nameKhaivi = document.querySelectorAll("#khaivi div.namePro h2")
+let nameMiy = document.querySelectorAll("#miy div.namePro h2")
+let nameDrink = document.querySelectorAll("#drink div.namePro h2")
 var mainName = document.querySelector("div.nameThumb h3")
 var mainGia = document.querySelector("div.priceThumb p span")
 let gia = document.querySelectorAll("div.GiaSp span")
 var mainDes = document.querySelector("div.modalContent div p.maindes")
 let des = document.getElementsByClassName("DesSp")
+let desOfPizza = document.querySelectorAll("#pizza div.DesSp p")
+let desOfSalad = document.querySelectorAll("#salad div.DesSp p")
+let desOfKhaiVi = document.querySelectorAll("#khaivi div.DesSp p")
+let desOfMiY = document.querySelectorAll("#miy div.DesSp p")
+let desOfDrink = document.querySelectorAll("#drink div.DesSp p")
 var mainSize = document.getElementById("mainSize")
 var mainbaseType = document.getElementById("mainbaseType")
 var mainToping = document.getElementById("mainToping")
@@ -70,10 +84,15 @@ for(let i = 0; i < buttonPizza.length; i++)
     buttonPizza[i].onclick = function() {
             let pathImg = imgPizza[i].src;
             mainImg.setAttribute("src",pathImg)
-            mainName.innerHTML = namePro[i].innerHTML 
+            mainName.innerHTML = namePizza[i].innerHTML 
             mainGia.innerHTML = gia[i].innerHTML
-            mainDes.innerHTML = des[i].innerHTML
+            mainDes.innerHTML = desOfPizza[i].innerHTML
             modal.style.display = "block"
+
+            infoSize.style.display = "block"
+            mainSize.style.display = "block"
+            mainbaseType.style.display = "block"
+            mainToping.style.display = "block"
     }
 }; 
 let buttonSalad = document.getElementsByClassName("Muahang salad")
@@ -82,9 +101,9 @@ for(let i = 0; i < buttonSalad.length; i++)
     buttonSalad[i].onclick = function() {
             let pathImg = imgSalad[i].src;
             mainImg.setAttribute("src",pathImg)
-            mainName.innerHTML = namePro[i].innerHTML
+            mainName.innerHTML = nameSalad[i].innerHTML
             mainGia.innerHTML = gia[i].innerHTML
-            mainDes.innerHTML = des[i].innerHTML
+            mainDes.innerHTML = desOfSalad[i].innerHTML
             modal.style.display = "block"
             
             infoSize.style.display = "none"
@@ -99,9 +118,9 @@ for(let i = 0; i < buttonKhaivi.length; i++)
     buttonKhaivi[i].onclick = function() {
             let pathImg = imgKhaivi[i].src;
             mainImg.setAttribute("src",pathImg)
-            mainName.innerHTML = namePro[i].innerHTML
+            mainName.innerHTML = nameKhaivi[i].innerHTML
             mainGia.innerHTML = gia[i].innerHTML
-            mainDes.innerHTML = des[i].innerHTML
+            mainDes.innerHTML = desOfKhaiVi[i].innerHTML
             modal.style.display = "block" 
             
             infoSize.style.display = "none"
@@ -116,9 +135,9 @@ for(let i = 0; i < buttonMiy.length; i++)
     buttonMiy[i].onclick = function() {
             let pathImg = imgMiy[i].src;
             mainImg.setAttribute("src",pathImg)
-            mainName.innerHTML = namePro[i].innerHTML
+            mainName.innerHTML = nameMiy[i].innerHTML
             mainGia.innerHTML = gia[i].innerHTML
-            mainDes.innerHTML = des[i].innerHTML
+            mainDes.innerHTML = desOfMiY[i].innerHTML
             modal.style.display = "block"  
             
             infoSize.style.display = "none"
@@ -133,9 +152,9 @@ for(let i = 0; i < buttonDrink.length; i++)
     buttonDrink[i].onclick = function() {
             let pathImg = imgDrink[i].src;
             mainImg.setAttribute("src",pathImg)
-            mainName.innerHTML = namePro[i].innerHTML
+            mainName.innerHTML = nameDrink[i].innerHTML
             mainGia.innerHTML = gia[i].innerHTML
-            mainDes.innerHTML = des[i].innerHTML
+            mainDes.innerHTML = desOfDrink[i].innerHTML
             modal.style.display = "block"
             
             infoSize.style.display = "none"
@@ -238,9 +257,15 @@ function showDivs(n) {
     if (n > x.length) {slideIndex = x.length}
     if (n < 3) {slideIndex = 3} ;
     for (let i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
+        x[i].style.display = "none";
     }
     x[slideIndex-1].style.display = "block";
     x[slideIndex-2].style.display = "block";
     x[slideIndex-3].style.display = "block";
+    if(window.getComputedStyle(x[slideIndex-1]).display === "block"){
+        x[slideIndex-1].style.marginRight = "0px"
+        x[slideIndex-2].style.marginRight = "10px"
+    } 
+    
+    
 }

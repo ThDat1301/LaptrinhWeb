@@ -8,6 +8,10 @@
 ul{
     list-style-type: none;
 }
+.carousel{
+    width: 80%;
+    margin: auto;
+}
   div.logo>a{
     font-size:33px;
     font-family: logo;
@@ -413,6 +417,7 @@ div.content>div:first-child{
 div.content>div{
     width:50%; 
     padding:40px;
+    padding-bottom: 10px;
     overflow-x: hidden;
     overflow-y:auto;
 }
@@ -497,6 +502,7 @@ div.baseType ul li label{
     border-radius: 4px;
 }
 div.toping ul{
+    height: 130px;
     position: relative;
     display:flex;
     align-items:center;
@@ -530,13 +536,15 @@ div.toping ul > li > input[type="checkbox"]:checked+label{
 }
 span.left-btn input{
     position: absolute;
-    top: 30%;
-    left:-9%;
+    top: 23%;
+    left:-8%;
+    height: 50%;
 }
 span.right-btn input{
     position: absolute;
-    top: 30%;
-    right:-6%;
+    top: 23%;
+    right:-8%;
+    height: 50%;
 }
 div.toping ul li{
     display:none;
@@ -549,6 +557,8 @@ div.note textarea{
 }
 div.Cart {
     text-align: center;
+    position: sticky;
+    bottom:  0;
 }
 div.Cart input{
     width: 80%;
