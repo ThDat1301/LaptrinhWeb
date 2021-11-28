@@ -11,4 +11,33 @@
     div.footerItem{
         width: 100%;
     }
+    nav ul.Menu li:not(:first-child){
+        margin: auto;
+        display:none;     
+    }
+    div.logo>a{
+        margin-left: 0;
+    }
+    nav ul.Menu>li:first-child {
+        display:flex; 
+        justify-content: flex-end;
+        margin: 0;
+        max-width: 100%; 
+    }
+    nav ul.Menu>li:first-child div{
+        margin-left: 20px;
+    }
+    nav ul.Menu>li:first-child input{
+        background-color: #2d2f33;
+        color: #f0f1f5;
+        width: 55px;
+        font-size: 30px;
+        margin-left: auto;
+        margin-right: 5px;
+        margin-top: 5px; 
+        margin-bottom: 5px;
+    }
+    nav ul li>input[type="button"]{
+        display: block;
+    }
 }

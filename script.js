@@ -1,3 +1,19 @@
+let showMenu = document.getElementById("menuButton")
+let menuItems = document.getElementsByClassName("Menuitems")
+let check = false;
+showMenu.onclick = function(){
+    if(!check){
+        for(let i = 1; i < menuItems.length; i++){
+            menuItems[i].style.display = "block"
+            check = true;
+        }
+    } else{
+        for(let i = 1; i < menuItems.length; i++){
+            menuItems[i].style.display = "none"
+            check = false;
+        }
+    }
+}
  //.............................Tim kiem...................................
  var search = document.getElementById("searchBtn")
  window.onload = function(){
@@ -130,12 +146,12 @@ for(let i = 0; i < buttonDrink.length; i++)
 };
 // When the user clicks on <span> (x), close the modal
 let modal=document.getElementById("myModal")
-let span =document.getElementsByClassName("close")[0]
-window.onload = function() {
+let span =document.getElementsByClassName("close1")[0]
+
     span.onclick = function() {
         modal.style.display = "none";
         }
-};
+
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
@@ -188,27 +204,27 @@ for(let i = 0; i < baseType.length; i++){
     }
 }
 /*Form dat ban*/
-window.onload = function() {
-    let NameOfCus = document.getElementById("nameCus")
-    let PhoneNumberOfCus = document.getElementById("phoneNumCus")
-    let EmailOfCus = document.getElementById("emailCus")
-    let DateOfCus = document.getElementById("dateCus")
-    let TimeOfCus = document.getElementById("timeCus")
-    let NoteOfCus = document.getElementById("NoteCus")
-    let Submit = document.getElementById("Submit")
-    Submit.onclick = function(){
-        if(NameOfCus.value === ""|| PhoneNumberOfCus.value === "" || DateOfCus.value === "" || TimeOfCus.value === "" ){
-            alert("Vui lòng nhập đủ thông tin!")
-        }
-        else{
-            let con = confirm("Bạn có chắc chắn thông tin vừa nhậP là chính xác")
-            if(con == true){
-                alert("Đặt bàn thành công!")
-                location.reload();
-            } 
-        }
-    }
-}
+// window.onload = function() {
+//     let NameOfCus = document.getElementById("nameCus")
+//     let PhoneNumberOfCus = document.getElementById("phoneNumCus")
+//     let EmailOfCus = document.getElementById("emailCus")
+//     let DateOfCus = document.getElementById("dateCus")
+//     let TimeOfCus = document.getElementById("timeCus")
+//     let NoteOfCus = document.getElementById("NoteCus")
+//     let Submit = document.getElementById("Submit")
+//     Submit.onclick = function(){
+//         if(NameOfCus.value === ""|| PhoneNumberOfCus.value === "" || DateOfCus.value === "" || TimeOfCus.value === "" ){
+//             alert("Vui lòng nhập đủ thông tin!")
+//         }
+//         else{
+//             let con = confirm("Bạn có chắc chắn thông tin vừa nhậP là chính xác")
+//             if(con == true){
+//                 alert("Đặt bàn thành công!")
+//                 location.reload();
+//             } 
+//         }
+//     }
+// }
 /* slideshow toping */
 let Lbtn = document.querySelector("span.left-btn input")
 let Rbtn = document.querySelector("span.right-btn input")
