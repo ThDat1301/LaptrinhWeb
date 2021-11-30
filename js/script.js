@@ -1,4 +1,37 @@
+$(document).ready(function(){
+    $("a.gotoTop").hide()
+    $(window).scroll(function(){
+        if($(this).scrollTop() >= 59){
+            $(".Menu").css({
+                "position": "fixed",
+                "left": "0",
+                "right": "0",
+                "opacity": "0.8",
+                "z-indedx": "9999!important"
+            },1000)
+        }
+        else {
+            $(".Menu").css({
+                "position": "relative",
+                "left": "0",
+                "right": "0",
+                "opacity": "1",
+                "z-indedx": "9999!important"
+            },1000)
+        }
 
+        if($(this).scrollTop() >= 250)
+            $("a.gotoTop").show("slow")
+        else 
+            $("a.gotoTop").hide("slow")
+    })
+    $("a.gotoTop").click(function(){
+        $("html, body").animate({
+            scrollTop: 0
+        },900)
+    })
+    
+})
 
 let showMenu = document.getElementById("menuButton")
 let menuItems = document.getElementsByClassName("Menuitems")

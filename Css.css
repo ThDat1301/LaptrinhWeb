@@ -11,6 +11,7 @@ ul{
 .carousel{
     width: 80%;
     margin: auto;
+    z-index: -1;
 }
   div.logo>a{
     font-size:33px;
@@ -18,7 +19,8 @@ ul{
     color:#f0f1f5;
     text-decoration: none;
     padding:2px;
-    margin-left: 40px;
+    margin-left: 30px;
+    margin-right: 30px;
     display: block;  
 }
 body{
@@ -31,6 +33,7 @@ nav ul.Menu{
     padding:0;
     justify-content: flex-end;
     width:100%;
+    z-index: 2;
 }
 nav ul.Menu a h1{
     font-family: Arial, Helvetica, sans-serif !important;
@@ -606,6 +609,16 @@ div.contentContact div:last-child input{
     background-color: #2d2f33;
     color: #f0f1f5;
     padding: 10px;
+}
+/*go to top button*/ 
+a.gotoTop {
+    font-size: 50px;
+    color: rgba(0, 85, 255, 0.8);
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 2;
+    display: none;
 }
 
 
