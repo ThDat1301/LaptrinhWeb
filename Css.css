@@ -11,7 +11,7 @@ ul{
 .carousel{
     width: 80%;
     margin: auto;
-    z-index: -1;
+    z-index: 1;
 }
   div.logo>a{
     font-size:33px;
@@ -178,16 +178,10 @@ div.twob{
     display:flex;
     justify-content: center;
 }
-div.item div{
-    transition: ease 0.4s;
-}
 div.item div.imgPro{
     width: 100%;
     text-align: center;
     padding: 10px;
-}
-div.item div.imgPro:hover{
-    transform:rotate(15deg);
 }
 div.item div img{
     width:100%;
@@ -371,6 +365,14 @@ div.decorate img{
     padding:5px;
 }
 /*Modal-box*/
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@keyframes fadeout {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
 .modal{
     display:none;
     position: fixed;
@@ -381,6 +383,8 @@ div.decorate img{
     overflow: auto;
     background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.4);
+    animation: fadein 1s;
+    
 }
 /* Modal Content */
 .modalContent {

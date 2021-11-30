@@ -2,8 +2,11 @@
     body{
         font-family: 'Times New Roman', Times, serif;
     }
-    div.item{
+    div.items{
         width: 90%;
+    }
+    div.item{
+        width: 100%;
         margin: auto;
         border-bottom: 1px #2d2f33 solid;
     }
@@ -53,6 +56,17 @@
     }
     div.twob{
         flex-direction: column;
+    }
+    div.item div.namePro{
+        width: 100%;
+    }
+    div.item div.twob{
+        width:40%;
+        margin: auto;
+    }
+    div.item div.imgPro{
+        width: 40%;
+        float:left;
     }
     div.GiaSp{
         width: 100%

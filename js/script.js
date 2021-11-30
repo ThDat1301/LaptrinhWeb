@@ -40,6 +40,7 @@ showMenu.onclick = function(){
     if(!check){
         for(let i = 1; i < menuItems.length; i++){
             menuItems[i].style.display = "block"
+
             
             check = true;
         }
@@ -200,8 +201,10 @@ let modal=document.getElementById("myModal")
 let span =document.getElementsByClassName("close1")[0]
 
     span.onclick = function() {
-        modal.style.display = "none";
+            modal.style.display = "none";
         }
+        
+        
 
 
 // When the user clicks anywhere outside of the modal, close it
