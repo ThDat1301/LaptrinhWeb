@@ -129,5 +129,10 @@
     div.footerItem:first-child{
         width: 100%;
     }
-   
+    div.description h1{
+        font-size: 10px;
+    }
+    div.description p{
+        font-size: 10px;
+    }
 }
