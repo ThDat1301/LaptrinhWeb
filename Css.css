@@ -335,41 +335,103 @@ div.decorate img{
     display: flex;
     flex-direction: row;
     max-width: 100%;
-    width: 100%;
-    flex-wrap: wrap;
-}
-.Map{
-    width: 50%;
-    padding: 10px;
-}
-.Map iframe{
-    padding: 10px;
-    width: 100%;
-    height: 80%;
-}
-.form{
-    width: 50%;
-    padding: 10px;
-}
-.lienheForm{
     width: 80%;
+    flex-wrap: wrap;
     margin: auto;
+    justify-content: space-between;
+    margin-bottom: 80px;
 }
 .thumbName h1{
     font-weight: bold;
     text-align: center;
 }
-.Text h1{
-    padding:5px;
+div.lienHe > div{
+    flex-wrap: wrap;
+    display: flex;
+    width: 32%;
+    background-color: #f7f9fb;
+    margin-right: 10px;
+    cursor: pointer;
 }
-.Text p{
-    padding:5px;
+div.lienHe > div:last-child{
+    margin-right: none;
 }
-.textarea textarea{
+div.lienHe > div > div{
     width: 100%;
-    height: 250px;
-
+    text-align: center;
 }
+div.lienHe > div > div i{
+    padding: 40px;
+    font-size: 40px;
+    text-align: center;
+}
+div.lienHe > div > div h4{
+    padding: 10px;
+}
+div.lienHe > div > div p{
+    padding: 10px;
+} 
+div.lienHe > div > div:last-child i{
+    padding: 10px!important;
+}
+div.lienHe > div > div:last-child{
+    opacity: 0;
+}
+div.lienHe > div:hover div:last-child{
+    opacity: 1;
+    transition: 0.75s; 
+}
+div.lienHe > div:hover{
+    box-shadow: 5px 5px 10px rgb(49, 48, 48);
+    transition: 0.75s;
+}
+div.info-box{
+    opacity: 0;
+    display: none;
+}
+div.info-box > div:last-child{
+    display: flex;
+    width: 70%;
+    margin: auto;
+}
+div.info-box h3{
+    text-align: center;
+}
+div.info-box div{
+    padding: 10px;
+}
+div.info-box div div:first-child{
+    text-align: center;
+}
+div.info-box div div{
+    padding: 10px;
+    width: 50%;
+}
+div.email-box h3{
+    text-align: center;
+}
+div.email-box{
+    width: 70%;
+    margin: auto;
+    opacity: 0;
+    display:none;
+}
+div.email-box div{
+    width: 70%;
+    margin: auto;
+}
+div.support-box{
+    display: none;
+    opacity: 0;
+    width: 70%;
+    margin: auto;
+}
+div.support-box h3{
+    text-align: center;
+}
+textarea {
+    resize: none;
+  }
 /*Modal-box*/
 @keyframes fadein {
     from { opacity: 0; }

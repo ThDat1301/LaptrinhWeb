@@ -6,7 +6,7 @@ $(document).ready(function(){
                 "position": "fixed",
                 "left": "0",
                 "right": "0",
-                "opacity": "0.8",
+                "opacity": "1",
                 "z-indedx": "9999!important"
             },1000)
         }
@@ -199,10 +199,12 @@ for(let i = 0; i < buttonDrink.length; i++)
 // When the user clicks on <span> (x), close the modal
 let modal=document.getElementById("myModal")
 let span =document.getElementsByClassName("close1")[0]
-
+if(span){
     span.onclick = function() {
-            modal.style.display = "none";
-        }
+        modal.style.display = "none";
+    }
+}
+   
         
         
 
@@ -258,49 +260,121 @@ for(let i = 0; i < baseType.length; i++){
     }
 }
 /*Form dat ban*/
-// window.onload = function() {
-//     let NameOfCus = document.getElementById("nameCus")
-//     let PhoneNumberOfCus = document.getElementById("phoneNumCus")
-//     let EmailOfCus = document.getElementById("emailCus")
-//     let DateOfCus = document.getElementById("dateCus")
-//     let TimeOfCus = document.getElementById("timeCus")
-//     let NoteOfCus = document.getElementById("NoteCus")
-//     let Submit = document.getElementById("Submit")
-//     Submit.onclick = function(){
-//         if(NameOfCus.value === ""|| PhoneNumberOfCus.value === "" || DateOfCus.value === "" || TimeOfCus.value === "" ){
-//             alert("Vui lòng nhập đủ thông tin!")
-//         }
-//         else{
-//             let con = confirm("Bạn có chắc chắn thông tin vừa nhậP là chính xác")
-//             if(con == true){
-//                 alert("Đặt bàn thành công!")
-//                 location.reload();
-//             } 
-//         }
-//     }
-// }
+let NameOfCus = document.getElementById("nameCus")
+let PhoneNumberOfCus = document.getElementById("phoneNumCus")
+let EmailOfCus = document.getElementById("emailCus")
+let DateOfCus = document.getElementById("dateCus")
+let TimeOfCus = document.getElementById("timeCus")
+let NoteOfCus = document.getElementById("NoteCus")
+let Submit = document.getElementById("Submit")
+if(Submit){
+    Submit.onclick = function(){
+        if(NameOfCus.value === ""|| PhoneNumberOfCus.value === "" || DateOfCus.value === "" || TimeOfCus.value === "" ){
+            alert("Vui lòng nhập đủ thông tin!")
+        }
+        else{
+            let con = confirm("Bạn có chắc chắn thông tin vừa nhậP là chính xác")
+            if(con == true){
+                alert("Đặt bàn thành công!")
+                location.reload();
+            } 
+        }
+    }
+}
 /* slideshow toping */
 let Lbtn = document.querySelector("span.left-btn input")
 let Rbtn = document.querySelector("span.right-btn input")
-var slideIndex = 3;
-function plusDivs(n) {
-    showDivs(slideIndex += n);
-}
-showDivs(slideIndex);
-function showDivs(n) {
-    let x = document.querySelectorAll("div.toping ul li")
-    if (n > x.length) {slideIndex = x.length}
-    if (n < 3) {slideIndex = 3} ;
-    for (let i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
+if(Lbtn){
+    var slideIndex = 3;
+    function plusDivs(n) {
+        showDivs(slideIndex += n);
     }
-    x[slideIndex-1].style.display = "block";
-    x[slideIndex-2].style.display = "block";
-    x[slideIndex-3].style.display = "block";
-    if(window.getComputedStyle(x[slideIndex-1]).display === "block"){
-        x[slideIndex-1].style.marginRight = "0px"
-        x[slideIndex-2].style.marginRight = "10px"
-    } 
+    showDivs(slideIndex);
+    function showDivs(n) {
+        let x = document.querySelectorAll("div.toping ul li")
+        if (n > x.length) {
+            slideIndex = x.length
+        }
+        if (n < 3) {
+            slideIndex = 3
+        }
+        for (let i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        x[slideIndex-1].style.display = "block";
+        x[slideIndex-2].style.display = "block";
+        x[slideIndex-3].style.display = "block";
+        if(window.getComputedStyle(x[slideIndex-1]).display === "block"){
+            x[slideIndex-1].style.marginRight = "0px"
+            x[slideIndex-2].style.marginRight = "10px"
+        }    
+    }
+}
+
+/*Lien he*/
+let infoButton = document.querySelector(".info")
+let emailButton = document.querySelector(".email")
+let supportButton = document.querySelector(".support")
+let infoBox = document.querySelector(".info-box")
+let emailBox = document.querySelector(".email-box")
+let supportBox = document.querySelector(".support-box")
+let checkInfoSupport = false;
+let checkInfoBox = false;
+let checkInfoEmail = false;
+function infoBoxON(){
+    supportBox.style.display = "none"
+    supportBox.style.opacity = "0"
+    emailBox.style.display = "none"
+    emailBox.style.opacity = "0"
+
+    infoBox.style.display = "block"
+    infoBox.style.opacity = "1"
+
+    checkInfoBox = true
+    checkInfoSupport = false
+    checkInfoEmail = false
+}
+function emailBoxON(){
     
+    infoBox.style.display = "none"
+    infoBox.style.opacity = "0"
+    supportBox.style.display = "none"
+    supportBox.style.opacity = "0"
     
+    emailBox.style.display = "block"
+    emailBox.style.opacity = "1"
+
+    checkInfoEmail = true
+    checkInfoBox = false
+    checkInfoSupport = false
+}
+function supportBoxON(){
+
+    infoBox.style.display = "none"
+    infoBox.style.opacity = "0"
+    emailBox.style.display = "none"
+    emailBox.style.opacity = "0"
+    
+    supportBox.style.display = "block"
+    supportBox.style.opacity = "1"
+
+    checkInfoSupport = true
+    checkInfoEmail = false
+    checkInfoBox = false
+}
+if(infoButton){
+    infoButton.onclick = function(){
+        if(!checkInfoBox)
+            infoBoxON()
+    }
+    emailButton.onclick = function(){
+        if(!checkInfoEmail){
+            emailBoxON()
+        }
+    }
+    supportButton.onclick = function(){
+        if(!checkInfoSupport){
+            supportBoxON()
+        }
+    }
 }
