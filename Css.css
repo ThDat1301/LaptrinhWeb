@@ -182,6 +182,10 @@ div.item div.imgPro{
     width: 100%;
     text-align: center;
     padding: 10px;
+    transition: ease 0.5s;
+}
+div.item div.imgPro:hover{
+    transform: rotate(20deg);
 }
 div.item div img{
     width:100%;
@@ -281,14 +285,62 @@ div.image_description:hover img{
 }
 div.demo{
     display: flex;
+    flex-wrap: wrap;
+}
+div.sales{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: auto;
+     /* The image used */
+    background-image: url("Food_image/Pizza-image/262553012_206217251665492_5259167442334686957_n.png");
+    /* Set a specific height */
+    min-height: 500px;
+      
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+
+}
+div.sale{
+    width: 32%;
+    position: relative;
+ 
+}
+
+div.deal{
+    background-color: #2d2f33;
+    text-align: center;
+    color: #f0f1f5;
+}
+div.sale img{
+    width: 100%;
+    text-align: center;
+    max-width: fit-content;
+    transition: ease 0.5s;
+}
+div.sale div{
+    width: 100%;
+    text-align: center;
+}
+div.sale img:hover{
+    transform:rotate(20deg);
+   
 }
 div.decorate {
     width: 33%;
-    margin-top: 40px;
+}
+div.sale h1{
+    text-align: center;
+    color: #f0f1f5;
 }
 div.decorate img{
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    padding: 50px;
+    
 }
 /*Form dat ban*/
 .DatbanForm{
