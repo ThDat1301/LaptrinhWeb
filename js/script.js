@@ -32,7 +32,6 @@ $(document).ready(function(){
     })
     
 })
-let slideIndex = 3;
 window.onload = function(){
     let showMenu = document.getElementById("menuButton")
     let menuItems = document.getElementsByClassName("Menuitems")
@@ -55,7 +54,7 @@ window.onload = function(){
             }
         }
     }
-     //.............................Tim kiem...................................
+     //Tim kiem
     const search = document.getElementById("searchBtn")
     search.onclick = function () {
         let k = document.getElementById("kw")
@@ -228,28 +227,20 @@ window.onload = function(){
     //Option for Modal Box
     let sizeNum = document.querySelector("span.sizeNum")
     let valsizeNum = document.querySelectorAll("div.size ul li input")
-    let priceSize = document.querySelectorAll("div.size ul li label span")
-    let paidMoney
     let prev = null;
     if(sizeNum){
         for(let i = 0; i < valsizeNum.length; i++) {
             valsizeNum[i].onclick = function () {
-                (prev)? console.log(prev.value):null;
-                if( valsizeNum[i] !== prev) {
-                    prev = valsizeNum[i];    
-                }
                 sizeNum.innerText = valsizeNum[i].value
-            };
+            }
         }
     }
     let baseTypeM = document.querySelector("span.baseTypemain")
     let baseType = document.querySelectorAll("div.baseType ul li input")
     for(let i = 0; i < baseType.length; i++){
         baseType[i].onclick = function (){
-            (prev)? console.log(prev.value):null;
-            if(baseType[i] !== prev){
-                baseTypeM.innerText = baseType[i].value
-            };
+            baseTypeM.innerText = baseType[i].value
+            
         }
     }
     /*Form dat ban*/
@@ -322,6 +313,7 @@ window.onload = function(){
         }
     }
 }
+let slideIndex = 3;
 function plusDivs(n) {
     showDivs(slideIndex += n);
 }
